@@ -105,14 +105,16 @@ with st.expander("Semester 2"):
         Evaluasi_unit_kurikuler_semester_2 = float(st.number_input(label='Evaluasi Unit K.Smt2', value=0))
     data["Evaluasi_unit_kurikuler_semester_2"] = Evaluasi_unit_kurikuler_semester_2
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     with col1:
         Nilai_unit_kurikuler_semester_2 = float(st.number_input(label='Nilai Unit K.Smt2', value=0))
     data["Nilai_unit_kurikuler_semester_2"] = Nilai_unit_kurikuler_semester_2
     with col2:
         Unit_kurikuler_semester_2_tanpa_evaluasi = float(st.number_input(label='Unit K.Smt1 tanpa Eval', value=0))
     data["Unit_kurikuler_semester_2_tanpa_evaluasi"] = Unit_kurikuler_semester_2_tanpa_evaluasi
-
+    with col3:
+        Unit_kurikuler_semester_2_disetujui = float(st.number_input(label='Unit K.Smt2 disetujui', value=0))
+    data["Unit_kurikuler_semester_2_disetujui"] = Unit_kurikuler_semester_2_disetujui
 
 with st.expander("View the Raw Data"):
     st.dataframe(data=data, width=800, height=10)
